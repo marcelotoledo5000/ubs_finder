@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo 'Rubocop scanning'
+rubocop
+
+echo 'Vulnerabilities scanning'
+bundle exec brakeman
+
+echo 'Testing'
+script/test

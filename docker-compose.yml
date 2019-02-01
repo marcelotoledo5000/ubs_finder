@@ -8,15 +8,15 @@ services:
       POSTGRES_PASSWORD: postgres
   server:
     image: skygvinn/debian-ruby2.6-nodejs:v1.0
-    container_name: ubs
+    container_name: ubs_finder
     ports:
       - "3000:3000"
     environment:
       - BUNDLE_PATH=vendor/bundle
       - BUNDLE_DISABLE_SHARED_GEMS=1
     volumes:
-      - .:/var/www/ubs:Z
-    working_dir: /var/www/ubs
+      - .:/var/www/ubs_finder:Z
+    working_dir: /var/www/ubs_finder
     command: bundle exec rails s -b 0.0.0.0
     depends_on:
       - db

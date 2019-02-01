@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CONTAINER_CREATED=$(docker ps --filter "name=ubs_server" --format "{{.Names}}")
+CONTAINER_CREATED=$(docker ps --filter "name=ubs_finder_server" --format "{{.Names}}")
 
 if [[ "$CONTAINER_CREATED" == "" ]]; then
     echo "Server was not running. Run it to speed up"

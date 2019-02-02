@@ -1,4 +1,10 @@
-# ubs_finder 0.0.2 (Feb 01, 2019) #
+# ubs_finder 0.0.3 (Feb 02, 2019) #
+
+* Changed gems: "active_model_serializers" by "jbuilder".
+
+  *Marcelo Toledo*
+
+## ubs_finder 0.0.2 (Feb 01, 2019) ##
 
 * Changed the project name
 * Configured any gems

@@ -1,7 +1,5 @@
 class Api::V1::UbsController < ApplicationController
   def find_ubs
-    @ubs = Ubs.all
-
-    render json: @ubs
+    @ubss = Ubs.all
   end
 end

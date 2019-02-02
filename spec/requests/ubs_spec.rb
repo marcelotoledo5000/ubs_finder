@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'UBS', type: :request do
   describe 'GET /api/v1/find_ubs' do
     context 'when whitout records' do
-      before { get '/api/v1/find_ubs' }
+      before { get '/api/v1/find_ubs.json' }
 
       it 'returns the ubs' do
         expect(json).to be_empty
@@ -25,7 +25,7 @@ RSpec.describe 'UBS', type: :request do
                    medicine: 1)
       end
 
-      before { get '/api/v1/find_ubs' }
+      before { get '/api/v1/find_ubs.json' }
 
       it 'returns the ubs' do
         expect(json).not_to be_empty

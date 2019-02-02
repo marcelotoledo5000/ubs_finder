@@ -5,7 +5,7 @@ gem install bundler
 
 echo "Installing gems"
 bundle install
-chown $LOCAL_USER:$LOCAL_USER vendor/bundle -R
+chown $UID:$UID . -R
 
 echo "Creating databases"
 bundle exec rails db:reset db:setup db:migrate

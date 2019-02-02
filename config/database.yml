@@ -9,16 +9,16 @@ default: &default
 
 development:
   <<: *default
-  database: ubs_development
+  database: ubs_finder_development
 
 test:
   <<: *default
-  database: ubs_test
+  database: ubs_finder_test
 
 production:
   <<: *default
   url: <%= ENV['DATABASE_URL'] %>
-  database: ubs_production
-  username: ubs
-  password: <%= ENV['UBS_DATABASE_PASSWORD'] %>
+  database: ubs_finder_production
+  username: ubs_finder
+  password: <%= ENV['UBS_finder_DATABASE_PASSWORD'] %>
   pool: 10

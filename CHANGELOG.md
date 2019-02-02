@@ -2,7 +2,7 @@
 
 * Changed the project name
 * Configured any gems
-* Created first test
+* Created the first test
 
   *Marcelo Toledo*
 

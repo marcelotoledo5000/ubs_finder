@@ -3,32 +3,69 @@ require 'rails_helper'
 RSpec.describe 'UBS', type: :request do
   describe 'GET /api/v1/find_ubs' do
     context 'when whitout records' do
-      before { get '/api/v1/find_ubs.json' }
+      let(:my_response) do
+        {
+          current_page: 1,
+          per_page: 1,
+          total_entries: 0,
+          entries: []
+        }.stringify_keys
+      end
+
+      before do
+        get '/api/v1/find_ubs.json?query=-10.9112370014188,-37.0620775222768'
+      end
 
       it 'returns the ubs' do
-        expect(json).to be_empty
-        expect(json).to eq []
+        expect(json).to eq my_response
       end
     end
 
     context 'when the record exists' do
-      let!(:my_ubs) do
-        Ubs.create(name: 'US OSWALDO DE SOUZA',
-                   address: 'TV ADALTO BOTELHO',
-                   city: 'Aracaju',
-                   phone: '7931791326',
-                   latitude: -10.9112370014188,
-                   longitude: -37.0620775222768,
-                   size: 2,
-                   adaptation_for_seniors: 1,
-                   medical_equipment: 1,
-                   medicine: 1)
+      let(:my_ubs) { create(:ubs) }
+      let(:my_response) do
+        {
+          current_page: 1,
+          per_page: 1,
+          total_entries: 1,
+          entries: [
+            {
+              id: my_ubs.id,
+              name: my_ubs.name,
+              address: my_ubs.address,
+              city: my_ubs.city,
+              phone: my_ubs.phone,
+              geocode: {
+                lat: my_ubs.latitude,
+                long: my_ubs.longitude
+              },
+              scores: {
+                size: my_ubs.size,
+                adaptation_for_seniors: my_ubs.adaptation_for_seniors,
+                medical_equipment: my_ubs.medical_equipment,
+                medicine: my_ubs.medicine
+              }
+            }
+          ]
+        }.deep_stringify_keys
       end
 
-      before { get '/api/v1/find_ubs.json' }
+      before do
+        get "/api/v1/find_ubs.json?query=#{my_ubs.latitude},#{my_ubs.longitude}"
+      end
 
-      it 'returns the ubs' do
-        expect(json).not_to be_empty
+      it 'returns the expected json format' do
+        expect(json).to eq my_response
+      end
+    end
+
+    context 'when not receive query params and pagination' do
+      xit 'returns the first page with 10 elements' do
+      end
+    end
+
+    context 'when not receive query params but receive pagination' do
+      xit 'returns the specific page with 10 elements' do
       end
     end
   end

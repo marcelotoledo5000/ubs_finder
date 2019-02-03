@@ -1,14 +1,14 @@
 FactoryBot.define do
   factory :ubs do
-    name { 'US OSWALDO DE SOUZA' }
-    address { 'TV ADALTO BOTELHO' }
-    city { 'Aracaju' }
-    phone { '7931791326' }
-    latitude { -10.9112370014188 }
-    longitude { -37.0620775222768 }
-    size { 2 }
-    adaptation_for_seniors { 3 }
-    medical_equipment { 1 }
-    medicine { 2 }
+    name { Faker::LordOfTheRings.location }
+    address { Faker::Address.street_name }
+    city { Faker::Address.city }
+    phone { Faker::PhoneNumber.phone_number }
+    latitude { Faker::Number.decimal(2, 6) }
+    longitude { Faker::Number.decimal(2, 3) }
+    size { Faker::Number.between(1, 3) }
+    adaptation_for_seniors { Faker::Number.between(1, 3) }
+    medical_equipment { Faker::Number.between(1, 3) }
+    medicine { Faker::Number.between(1, 3) }
   end
 end

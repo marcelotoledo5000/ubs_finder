@@ -26,8 +26,8 @@ ActiveRecord::Schema.define(version: 2019_02_01_213910) do
     t.integer "adaptation_for_seniors"
     t.integer "medical_equipment"
     t.integer "medicine"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at", default: -> { "CURRENT_TIMESTAMP" }
+    t.datetime "updated_at", default: -> { "CURRENT_TIMESTAMP" }
   end
 
 end

@@ -6,6 +6,7 @@ ruby '2.6.0'
 gem 'jbuilder', '~> 2.8'
 gem 'kaminari', '~> 1.1', '>= 1.1.1'
 gem 'pg', '>= 0.18', '< 2.0'
+gem 'postgres-copy', '~> 1.4', '>= 1.4.1'
 gem 'puma', '~> 3.11'
 gem 'rails', '~> 5.2.2'
 # Use Redis adapter to run Action Cable in production

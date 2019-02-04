@@ -23,3 +23,5 @@ Style/FrozenStringLiteralComment:
   Enabled: false
 Style/ClassAndModuleChildren:
   EnforcedStyle: compact
+Layout/DotPosition:
+  EnforcedStyle: trailing

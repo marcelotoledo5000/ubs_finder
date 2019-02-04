@@ -1,5 +1,5 @@
-json.current_page 1   # ToDo
-json.per_page 1       # ToDo
+json.current_page @page
+json.per_page @per_page
 json.total_entries Ubs.all.count
 
 json.entries @ubss do |ubs|

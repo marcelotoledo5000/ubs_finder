@@ -1,4 +1,11 @@
-# ubs_finder 0.0.4 (Feb 03, 2019) #
+# ubs_finder 0.0.5 (Feb 03, 2019) #
+
+* Created a rake task to import database from csv file using postgres-copy
+* Fixed return with pagination and added new tests
+
+  *Marcelo Toledo*
+
+## ubs_finder 0.0.4 (Feb 03, 2019) ##
 
 * Fixed json response
 * Added new tests

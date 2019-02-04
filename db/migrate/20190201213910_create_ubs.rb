@@ -11,8 +11,9 @@ class CreateUbs < ActiveRecord::Migration[5.2]
       t.integer :adaptation_for_seniors
       t.integer :medical_equipment
       t.integer :medicine
-
-      t.timestamps
+      # Changed here to use postgres_copy
+      t.datetime :created_at, default: -> { 'CURRENT_TIMESTAMP' }
+      t.datetime :updated_at, default: -> { 'CURRENT_TIMESTAMP' }
     end
   end
 end

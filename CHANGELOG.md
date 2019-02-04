@@ -1,6 +1,14 @@
-# ubs_finder 0.0.3 (Feb 02, 2019) #
+# ubs_finder 0.0.4 (Feb 03, 2019) #
 
-* Changed gems: "active_model_serializers" by "jbuilder".
+* Fixed json response
+* Added new tests
+
+  *Marcelo Toledo*
+
+## ubs_finder 0.0.3 (Feb 02, 2019) ##
+
+* Changed gems: "active_model_serializers" by "jbuilder"
+* Added database cleaner, and faker gems
 
   *Marcelo Toledo*
 

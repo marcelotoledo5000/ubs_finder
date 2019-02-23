@@ -1,4 +1,10 @@
-# ubs_finder 0.0.5 (Feb 03, 2019) #
+# ubs_finder 0.0.6 (Feb 23, 2019) #
+
+* Added Brakeman
+
+  *Marcelo Toledo*
+
+## ubs_finder 0.0.5 (Feb 03, 2019) ##
 
 * Created a rake task to import database from csv file using postgres-copy
 * Fixed return with pagination and added new tests

@@ -1,4 +1,12 @@
-# ubs_finder 0.0.6 (Feb 23, 2019) #
+# ubs_finder 0.0.7 (Dec 28, 2019) #
+
+* Upgrade Ruby
+* Upgrade Rails
+* Update a lot of gems
+
+  *Marcelo Toledo*
+
+## ubs_finder 0.0.6 (Feb 23, 2019) #
 
 * Added Brakeman
 

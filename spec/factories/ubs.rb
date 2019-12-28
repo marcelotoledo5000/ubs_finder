@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 FactoryBot.define do
   factory :ubs do
     name { Faker::LordOfTheRings.location }

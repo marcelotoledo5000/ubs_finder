@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 json.current_page @page
 json.per_page @per_page
 json.total_entries Ubs.all.count

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -20,6 +22,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.9'
   gem 'rubocop', '~> 0.78.0'
   gem 'rubocop-performance', '~> 1.5'
+  gem 'rubocop-rails', '~> 2.4'
   gem 'rubocop-rspec', '~> 1.37'
   gem 'shoulda-matchers', '~> 4.1'
   gem 'simplecov', '~> 0.17.1'

@@ -1,3 +1,5 @@
+dist: trusty
+
 env:
   global:
     - CC_TEST_REPORTER_ID=4032b9a472e3ceaa1347fba7f1b8960f526d5c53c14865c2c20c54ecb415547f
@@ -17,7 +19,7 @@ before_script:
 language: ruby
 
 rvm:
-  - 2.6.0
+  - 2.6.5
 
 script:
   - bundle exec rails db:reset db:setup db:migrate RAILS_ENV=test

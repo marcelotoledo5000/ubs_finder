@@ -3,12 +3,17 @@ dist: trusty
 env:
   global:
     - CC_TEST_REPORTER_ID=4032b9a472e3ceaa1347fba7f1b8960f526d5c53c14865c2c20c54ecb415547f
+    - PGPORT=5433
 
 services:
   - postgresql
 
 addons:
-  postgresql: '9.6'
+  postgresql: '10'
+  apt:
+    packages:
+    - postgresql-10
+    - postgresql-client-10
 
 before_script:
   - cp config/database.yml.travis config/database.yml
@@ -22,9 +27,11 @@ rvm:
   - 2.6.5
 
 script:
-  - bundle exec rails db:reset db:setup db:migrate RAILS_ENV=test
+  - RAILS_ENV=test bundle exec rails db:reset db:setup db:migrate
   - bundle exec rspec
   - bundle exec rubocop --config .rubocop.yml
+
+sudo: required
 
 before_install:
   - gem update --system

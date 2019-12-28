@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 namespace :import do
   desc 'To import data from csv file: to execute:
   `bundle exec rake import:data`'

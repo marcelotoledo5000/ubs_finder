@@ -8,7 +8,7 @@ ruby '2.6.5'
 gem 'bootsnap', '~> 1.4', require: false
 gem 'geocoder', '~> 1.5'
 gem 'jbuilder', '~> 2.9'
-gem 'kaminari', '~> 1.1'
+gem 'kaminari', '~> 1.2'
 gem 'pg', '~> 1.2'
 gem 'postgres-copy', '~> 1.4'
 gem 'puma', '~> 4.3'
